@@ -12,7 +12,8 @@ INFER_SIZE = (256, 512, 3)
 To modify part of the screen to capture, change **line 87**, by default it is:
 monitor = {"top": 0, "left": 0, "width": 640, "height": 200}
 
+# For steering only: 
+**python steer.py**
 
-
-For steering only: **python steer.py**
-For ICNet only: **python icnet.py**
+# For ICNet only: 
+**python icnet.py**

@@ -48,7 +48,6 @@ if __name__ == '__main__':
                     screen = np.flip(screen[:, :, :3], 2)
                     #screen = cv2.cvtColor(screen, cv2.COLOR_BGR2RGB)
                     
-                    print("fps: {}".format(1 / (time.time() - last_time)))
                     image = scipy.misc.imresize(screen, [66, 200]) / 255.0
 
                     steering = sess.run(
@@ -64,6 +63,8 @@ if __name__ == '__main__':
                     print("Predicted steering angle: " +
                           str(degrees) + " degrees")
 
+                    print("fps: {}".format(1 / (time.time() - last_time)))
+                    
                     cv2.imshow("Neural Network Input", image)
 
                     #cv2.putText(screen, "FPs: {}".format((1 / (time.time() - last_time)), (40+250,70), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,0), 1,cv2.LINE_AA)
